@@ -5,7 +5,7 @@ $("#seed").keyup(function() {
 		fire();
 });
 
-$("#seed").val(Math.floor(Math.random() * 1000));
+$("#seed").val(getInitialSeed());
 fire();
 
 function clearboard(){
@@ -17,12 +17,27 @@ function clearboard(){
 		ctx.clearRect(0,0,cw,ch);
 }
 
+function getInitialSeed () {
+	const seedFromHash = parseInt(window.location.hash.replace('#', ''));
 
+	// Reset hash
+	window.location.hash = '';
+
+  if (!isNaN(seedFromHash)) {
+    return `${seedFromHash}`;
+  } else {
+		return `${Math.floor(Math.random() * 1000)}`;
+	}
+}
+
+function getSeed () {
+	return document.querySelector('#seed').value;
+}
 
 function fire() {
 		clearboard();
 		//get seed and set the seed for randomizer
-		var seed = document.getElementById("seed").value;
+		var seed = getSeed();
 		Math.seedrandom(seed.toLowerCase());
 		randpos = Math.random()*1000
 
