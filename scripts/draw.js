@@ -89,7 +89,6 @@ function update_seed(){
 		fire();
 }
 
-
 function update_percentages(){
 		var checkbox = document.getElementById("percentages");
 		var text = document.getElementById("guessdisp");
@@ -98,4 +97,40 @@ function update_percentages(){
 		} else {
 				text.style.display = "none";
 		}
+}
+
+function new_clue() {
+	update_seed();
+
+	const peekUrl = `${window.location.origin}${window.location.pathname}#${getSeed()}`
+	copyToClipboard(peekUrl);
+}
+
+/**
+ * Copies some text to clipboard
+ * @param {string} text
+ *
+ * @returns {Promise}
+ */
+function copyToClipboard(text) {
+  if ("clipboard" in navigator) {
+    return navigator.clipboard.writeText(text);
+  }
+
+  // Fallback for Safari and IE
+  return new Promise(function(resolve, reject) {
+    var textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    try {
+      document.execCommand("copy");
+      resolve();
+    } catch (err) {
+      reject();
+    } finally {
+      document.body.removeChild(textarea);
+    }
+  });
 }
