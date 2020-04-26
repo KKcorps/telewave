@@ -73,7 +73,9 @@ a {
 		font-size: 1.3rem;
 }
 
-
+.hidden {
+	display: none;
+}
 
 .slidecontainer {
 		width: 100%; /* Width of the outside container */
