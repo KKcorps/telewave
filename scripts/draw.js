@@ -101,9 +101,14 @@ function update_percentages(){
 
 function new_clue() {
 	update_seed();
+}
 
-	const peekUrl = `${window.location.origin}${window.location.pathname}#${getSeed()}`
-	copyToClipboard(peekUrl);
+function copy_url () {
+	const peekUrl = `${window.location.origin}${
+    window.location.pathname
+	}#${getSeed()}`;
+	
+  copyToClipboard(peekUrl);
 }
 
 /**

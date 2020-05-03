@@ -19,9 +19,11 @@
 					<input type="text" id="seed" placeholder="seed" size="8" autofocus>
 				</div>
 				<button id="new" onclick="new_clue()">New clue</button>
+				<button id="copy" onclick="copy_url()">Copy Peek URL</button>
 				<button id="commit" onclick="button_guess()">Guess</button>
 				<button id="reveal" onclick="button_peak()">Peek</button>
 				<button id="reset" onclick="clearboard()">Clear</button>
+
 				<div class="percentages-container">
 						<span id="percentagesText" class="label">Percentages?</span>
 						<input type="checkbox" id="percentages" checked onclick="update_percentages()">
