@@ -6,11 +6,11 @@ Forked from [gjeuken/telewave](https://github.com/gjeuken/telewave)
 
 # Instructions
 
-* [Good video explaining the game](https://youtu.be/KuL_R60_320?t=225)
+* [Good video explaining the game](https://youtu.be/4lwGkSiEHeA)
 * One person starts this on their computer and shares their screen.
-* As soon as the host clicks on "New Clue", a link is copied to the clipboard, which can be shared with the clue-giver.
-* The clue-giver visits the link and clicks on Peek.
-* The clue-giver then gives the clue to the team.
+* As soon as the host clicks on "Copy Peek URL", a link is copied to the clipboard, which can be shared with the psychic.
+* The psychic visits the link and clicks on Peek.
+* The psychic then gives the clue to the team.
 * The host will place the marker at the requested position.
 * The host clicks on "Guess".
 * Points are then assigned by the host.
@@ -22,6 +22,7 @@ Forked from [gjeuken/telewave](https://github.com/gjeuken/telewave)
 * Functions:
 	* Seed: generates a unique board. The seed can be **any combination of numbers and letters**. (Tip: using words makes it easier to share the seed.)
 	* New clue: generates a new random seed.
+	* Copy Peek URL: Copies to clipboard a URL that can be shared wit the psychic.
 	* Guess: Compares your current position of the dial against the target, and shows you how many points you got.
 	* Peek: reveals the target.
 	* Clear: Erases the target and guess from the board.
