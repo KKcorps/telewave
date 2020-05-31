@@ -1,5 +1,9 @@
 var data = [
 ["Bad","Good"],
+["Bad at coding", "Good at coding"],
+["Things Kartik won't buy", "Things Kartik will buy"],
+["Sarvesh won't eat", "Sarvesh will eat"],
+["Not a sport", "Is a sport"],
 ["Mildly addictive","Highly addictive"],
 ["Hot","Cold"],
 ["Normal","Weird"],
